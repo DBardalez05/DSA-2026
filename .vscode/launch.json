@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run meeting scheduler",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/Assignment01/meeting_scheduler/meeting.exe",
+            "cwd": "${workspaceFolder}/Assignment01/meeting_scheduler",
+            "MIMode": "gdb",
+            "preLaunchTask": "build meeting scheduler"
+        }
+    ]
+}

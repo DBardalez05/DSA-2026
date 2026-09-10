@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build meeting scheduler",
+            "type": "cppbuild",
+            "command": "g++",
+            "args": [
+                "-g",
+                "${workspaceFolder}/Assignment01/meeting_scheduler/main.cpp",
+                "${workspaceFolder}/Assignment01/meeting_scheduler/Meeting.cpp",
+                "-o",
+                "${workspaceFolder}/Assignment01/meeting_scheduler/meeting.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/Assignment01/meeting_scheduler"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
