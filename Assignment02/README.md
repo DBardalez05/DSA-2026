@@ -1,0 +1,13 @@
+## Practice Problems with Stacks and Queues
+
+### Valid Parentheses — Implemented in IDE and in Leetcode
+
+My method was that I first read the string one character at a time and use a stack to keep track of opening brackets. A stack is last in, first out, which works here since a closing bracket has to match the most recent opening bracket. For example {[]} works while ({)} doesn't. My logic was that the first iteration at which the program was going to fail was with a closing bracket so, I first check whether the stack is empty at teh first end bracket. If it is, I return false. Otherwise, I combine the opening bracket at the top of the stack with the closing bracket into a two-character string. If it makes `()`, `[]`, or `{}`, I pop the opening bracket and keep going. If it does not match, I return `false`. After I have read the whole string, I return `true` only if the stack is empty sicne it woudl mean that all opening parenthesis had its correct closing parenthesis in order. Since my stack function names were different to the ones in the stack library trying to implement inot leetcode was a bit not as smooth as I wanted it to but still fun it took me like 42 minutes to be able to solve it.
+
+### Exercise 3
+
+My first thought was to move everything into a second stack. That reverses the order in the second stack(123 becomes 321), but it also leaves the original stack empty. If I need the original stack itself to be reversed, I would use a queue in order to do this. I would pop every value from the stack into the queue, then take each value out of the queue and push it back onto the original stack. This puts the old top value at the bottom and the old bottom value at the top. So a good way to show this would be for exmaple we have stack a with (1,2,3) then into queu would be (3,2,1) then after pop back into the original stack it would be (3,2,1).
+
+### Exercise 5
+
+This looked similar to reversing a stack at first, but the copy has to have the same order, and the original stack has to keep its values. To do this I would use one queue first. First, I would move everything from the original stack to the queue and then back to the original stack. so now the original stack is reversed. I would then move those values into the queue one more time. Now, as I remove each value from the queue, I would push it onto both the original stack and the new stack. At the end, both stacks have the same values in the same order as original.
